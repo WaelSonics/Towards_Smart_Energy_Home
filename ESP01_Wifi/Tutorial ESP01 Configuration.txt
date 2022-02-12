@@ -1,0 +1,47 @@
+Direct Coding:
+
+1) Connection:
+ESP01->Arduino Nano
+EN+3V3->3.3V
+GPIO1(only for code upload)+GND->GND
+Rx(voltage devider)->RX
+Tx->Tx
+
+2) Arduino IDE:
+Open Code.
+Board: ESP8266 General Module.
+Port: number.
+
+3) Upload:
+Click upload then wait for finish.
+Unplug the USB.
+Unplug the the GPIO1 pin.
+Plug the USB and open monitor port.
+The output must appear. If not Reset the arduino and the esp01 (by connecting the GND to RST for 3 seconds).
+
+
+For AT Commands:
+
+1) Reset the components.
+
+2) Connection:
+ESP01->Arduino Nano
+EN+3V3->3.3V
+GND->GND
+Rx(voltage devider)->RX
+Tx->Tx
+
+3) Arduino IDE:
+New File(Blank).
+Board: Arduino Nano.
+Processor: ATmega328P (OLD BOOTLOADER).
+
+4)Upload: 
+Unplug the RX and TX pins from one side.
+Upload the blank code to the Nano.
+When Done uploading, Plug the RX and Tx pins
+Plug a wire between RST and GND pins on the arduino nano side.
+When all set up open the Serial Monitor.
+Set the speed to 115200.
+Set Communication to "Both NL And CR"
+Add the AT commands using the blank textbox at the top of the monitor.
